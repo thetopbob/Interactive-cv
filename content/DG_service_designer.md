@@ -3,9 +3,9 @@ npc_name: "The Transformation Architect"
 title: "Service Design & Transition Manager"
 company: "Domestic & General"
 period: "February 2020 - September 2021"
-sprite: "male_noble"
+sprite: 433
 x: 520
-y: 128
+y: 240
 quest_id: "new_world_expansion"
 ---
 
