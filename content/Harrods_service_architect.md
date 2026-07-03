@@ -3,7 +3,7 @@ npc_name: "The Service Designer"
 title: "IT Service Architect & Service Designer"
 company: "Harrods"
 period: "February 2019 - February 2020"
-sprite: "male_merchant"
+sprite: 433
 x: 340
 y: 260
 quest_id: "harrods_digital_transformation"
