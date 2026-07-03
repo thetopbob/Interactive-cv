@@ -1,0 +1,162 @@
+:root {
+    --night: #14121f;
+    --panel: #241f33;
+    --parchment: #f3e6d0;
+    --gold: #c9a35c;
+    --gold-dim: #8a713c;
+    --teal-accent: #57d1c9;
+    --font-display: "Press Start 2P", monospace;
+    --font-body: "VT323", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--night);
+    color: var(--parchment);
+    font-family: var(--font-body);
+    height: 100%;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+    gap: 12px;
+}
+
+#hud {
+    width: 750;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-display);
+}
+
+.hud-title {
+    font-size: 14px;
+    color: var(--teal-accent);
+    letter-spacing: 1px;
+}
+
+.hud-hint {
+    font-size: 18px;
+    font-family: var(--font-body);
+    color: var(--gold-dim);
+}
+
+#game-container {
+    border: 4px solid var(--gold-dim);
+    box-shadow:
+        0 0 0 4px var(--night),
+        0 8px 24px rgba(0, 0, 0, 0.6);
+    image-rendering: pixelated;
+    line-height: 0;
+}
+
+/* --- Dialog overlay: SNES-style text box with a raised nameplate tab --- */
+
+#dialog-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 6%;
+    background: rgba(10, 8, 16, 0.35);
+    z-index: 20;
+}
+
+#dialog-overlay.hidden {
+    display: none;
+}
+
+#dialog-box {
+    position: relative;
+    width: min(720px, 90vw);
+    background: var(--panel);
+    border: 3px solid var(--gold);
+    box-shadow:
+        0 0 0 3px var(--night),
+        inset 0 0 0 2px rgba(201, 163, 92, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 28px 24px 20px;
+}
+
+#dialog-nameplate {
+    position: absolute;
+    top: -22px;
+    left: 20px;
+    background: var(--gold);
+    color: var(--night);
+    font-family: var(--font-display);
+    font-size: 11px;
+    padding: 6px 12px;
+    border: 3px solid var(--night);
+    box-shadow: 0 0 0 2px var(--gold);
+}
+
+#dialog-title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    color: var(--teal-accent);
+    margin: 4px 0 14px;
+    line-height: 1.6;
+}
+
+#dialog-body {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--parchment);
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+#dialog-body p {
+    margin: 0 0 12px;
+}
+
+#dialog-body ul {
+    margin: 0 0 12px;
+    padding-left: 22px;
+}
+
+#dialog-body a {
+    color: var(--teal-accent);
+}
+
+#dialog-close {
+    position: absolute;
+    top: -22px;
+    right: 8px;
+    font-family: var(--font-display);
+    font-size: 10px;
+    background: var(--night);
+    color: var(--gold);
+    border: 3px solid var(--gold);
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+#dialog-close:hover,
+#dialog-close:focus-visible {
+    background: var(--gold);
+    color: var(--night);
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

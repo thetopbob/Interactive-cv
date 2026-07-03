@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Copado_program_architect",
+    "npc": "Program Architect - Salesforce DevOps",
+    "title": "Program Architect - Salesforce DevOps",
+    "x": 690,
+    "y": 350,
+    "order": 0,
+    "sprite": 325,
+    "html": "<h1>Copado</h1>\n<p>As a Program Architect at Copado, my mission was to help some of the world's largest organisations improve the way they delivered change through Salesforce.</p>\n<p>Every customer faced different challenges. Some struggled with inefficient release processes, while others needed a strategic vision for how DevOps could support long-term business goals. My role was to investigate the current state, identify opportunities for improvement, and build practical roadmaps for transformation.</p>\n<p>One engagement involved a major financial institution where I identified technology and process challenges that were creating significant operational overhead every month. By helping define a new DevOps approach and guiding transition activities, those inefficiencies were removed while improving the consistency of platform releases.</p>\n<p>I regularly acted as a trusted advisor to engineering teams, development partners, and senior stakeholders. Through coaching, planning, and technical leadership, I helped organisations establish stronger delivery practices and gain greater value from their investment in Salesforce.</p>\n<p>Beyond customer engagements, I developed reusable solutions and delivery assets that could be adopted across multiple projects, improving consistency for both customers and consulting teams.</p>\n<p>My work and passion for cultural transformation in technology eventually led to an invitation to deliver a keynote presentation on the importance of people and culture within successful DevOps programmes.</p>\n<p><strong>Skills gained:</strong> DevOps Strategy, Salesforce Delivery, Enterprise Consulting, Stakeholder Management, Product Architecture, Organisational Change.</p>\n"
+  },
+  {
+    "id": "DG_service_designer",
+    "npc": "Service Design & Transition Manager",
+    "title": "Service Design & Transition Manager",
+    "x": 520,
+    "y": 128,
+    "order": 0,
+    "sprite": "male_noble",
+    "html": "<h1>Domestic &amp; General</h1>\n<p>I joined Domestic &amp; General at a pivotal moment in the company's history. The organisation was preparing to enter a major new market in the United States, and technology would play a crucial role in making that expansion successful.</p>\n<p>My mission was twofold. First, I was asked to lead the Service Management workstream supporting the expansion programme. Second, I took on responsibilities as a Solution Architect, helping shape the technology foundations that would support the business as it entered a new territory.</p>\n<p>One of the first challenges was defining how services would be delivered in this new operating environment. Working closely with technology leaders and delivery partners, I helped create a target operating model and capability model for Service Management. These blueprints provided clarity around responsibilities, delivery approaches, and the partnerships required to support long-term success.</p>\n<p>As plans evolved, I designed a Service Management Blueprint that embraced modern DevSecOps principles. Rather than relying on traditional governance-heavy processes, the focus was on enabling teams to deliver securely, efficiently, and at scale. The result was an approach that balanced control with agility and supported the fast-paced demands of a growing business.</p>\n<p>To bring this vision to life, I led the selection and implementation of key tools that would form the backbone of the engineering ecosystem. This included technologies such as Jira, GitHub, Copado, Confluence, and ServiceNow, supporting both AWS and Salesforce platforms. Together, these tools formed an integrated DevSecOps toolchain capable of supporting development, operations, governance, and collaboration.</p>\n<p>I also led the solution design for a low-touch onboarding capability for employees in the United States. By leveraging Microsoft Autopilot and direct-to-door device fulfilment, new joiners could receive and configure their devices with minimal manual intervention, improving both efficiency and employee experience.</p>\n<p>Throughout my time at Domestic &amp; General, I worked closely with teams across the organisation, coaching colleagues on effective Service Management practices and helping ensure that solutions were designed with security, scalability, and reliability in mind.</p>\n<p>The role reinforced a lesson that has followed me throughout my career: successful transformation is not just about technology. It is about creating the right operating model, empowering people, and building services that enable the business to achieve its goals.</p>\n<p><strong>Skills gained:</strong> Service Design, Solution Architecture, DevSecOps, AWS, Salesforce, ServiceNow, Operating Model Design, Technology Strategy, Service Management, Digital Transformation.</p>\n"
+  },
+  {
+    "id": "Dentsu_service_architect",
+    "npc": "Service Architect",
+    "title": "Service Architect",
+    "x": 520,
+    "y": 480,
+    "order": 0,
+    "sprite": 433,
+    "html": "<h1>Dentsu Aegis Network</h1>\n<p>I earned my promotion to Service Architect at a pivotal moment in Dentsu's technology transformation journey. The organisation was rapidly evolving, bringing critical services back in-house while simultaneously building new digital capabilities for a global business operating across many regions and brands.</p>\n<p>My first major challenge was leading the modernisation of the company's ServiceNow platform. The platform was heavily customised, widely used across the business, and considered too important to fail. By bringing together the right people, focusing on outcomes, and maintaining a relentless attention to detail, I led the successful upgrade of the platform in just five weeks, delivering the project three weeks ahead of schedule while maintaining operational stability.</p>\n<p>Beyond individual projects, I was responsible for helping shape the future direction of service technology across the organisation. Working closely with senior leadership, I developed a ServiceNow product roadmap aligned to the strategic priorities of the Global CTO. This roadmap provided clarity, direction, and focus for multiple transformation initiatives while balancing the operational needs of teams across the business.</p>\n<p>Recognising that successful transformation depends on people as much as technology, I helped establish a new Business Analysis capability. By recruiting and mentoring junior team members, I built a stronger pipeline of talent and enabled better engagement between technical teams and business stakeholders. Within weeks, these new team members were making valuable contributions to ongoing programmes.</p>\n<p>As the organisation's Service Management authority within architecture discussions, I worked across a wide variety of initiatives to ensure systems were designed with operational excellence in mind. I published technology standards covering Service Management, Event Management, Monitoring, and Collaboration platforms, creating a consistent foundation that could be adopted globally.</p>\n<p>What I enjoyed most about this role was helping teams see the bigger picture. Technology decisions are not just about systems and tools; they are about enabling people to work more effectively and helping organisations achieve their goals. By combining architecture, strategy, governance, and delivery, I was able to contribute to a transformation that extended far beyond any single platform.</p>\n<p><strong>Skills gained:</strong> Service Architecture, ServiceNow, Technology Strategy, Enterprise Governance, Team Leadership, Business Analysis, Service Management, Platform Modernisation.</p>\n"
+  },
+  {
+    "id": "Harrods_service_architect",
+    "npc": "IT Service Architect & Service Designer",
+    "title": "IT Service Architect & Service Designer",
+    "x": 340,
+    "y": 260,
+    "order": 0,
+    "sprite": "male_merchant",
+    "html": "<h1>Harrods</h1>\n<p>When I joined Harrods, the organisation was embarking on an ambitious transformation programme. A major objective was replacing an ageing and costly eCommerce platform while modernising the business capabilities that supported it.</p>\n<p>My role was to ensure that new technology could be introduced successfully without disrupting the exceptional customer experience that the Harrods brand is known for. To achieve this, I established a Service Design and Transition framework that provided structure, consistency, and confidence during a period of rapid change.</p>\n<p>One of my most significant contributions was designing the service model for the new eCommerce capability. This involved defining processes, selecting Service Management approaches, and creating clear interactions between internal teams and strategic delivery partners. By building these foundations early, the organisation was able to scale delivery while maintaining operational control.</p>\n<p>As the transformation accelerated, I identified opportunities to automate manual processes that were slowing teams down. Improvements to Change and Incident communications reduced administrative effort and enabled faster, more reliable collaboration between operations and development teams.</p>\n<p>I also helped guide several high-profile service introductions. A notable example was the implementation of Workday, where I designed an Early Life Support model that brought together colleagues from IT, Payroll, and HR. This ensured issues could be identified and resolved quickly during the critical launch period.</p>\n<p>Recognising the growing demand for governance and service introduction expertise, I recruited and led a Service Design and Transition team. Together we supported more than fifty live projects, helping ensure that change was introduced in a controlled and sustainable manner.</p>\n<p>Towards the end of my tenure, I project managed key aspects of the migration to the new eCommerce platform. This included defining cutover plans and establishing a cross-functional Command Centre that coordinated activities across multiple teams, ensuring a smooth transition to the new environment.</p>\n<p>Looking back, this role strengthened my ability to balance technology, people, and process during large-scale transformation programmes. It demonstrated how effective service design can enable organisations to move quickly while maintaining stability and trust.</p>\n<p><strong>Skills gained:</strong> Service Design, Digital Transformation, eCommerce Platforms, Team Leadership, Process Automation, Service Introduction, ITIL, Programme Delivery, Change Management.</p>\n"
+  },
+  {
+    "id": "Lseg_principle_platform_engineer",
+    "npc": "Principal Platform Engineer",
+    "title": "Principal Platform Engineer",
+    "x": 420,
+    "y": 350,
+    "order": 1,
+    "sprite": 325,
+    "html": "<h1>London Stock Exchange Group</h1>\n<p>When I joined the London Stock Exchange Group, I was asked to help transform a collection of critical platforms that sat at the heart of the business.</p>\n<p>By introducing a modern approach to engineering and change delivery, I helped teams deploy faster and more frequently, enabling more than seventy successful releases each year across a highly complex technology landscape. This was achieved without compromising the reliability expected of a global financial institution.</p>\n<p>Recognising that strong internal capability is just as important as great technology, I led the insourcing of key DevOps and Quality Engineering functions, helping build a sustainable foundation for future growth. At the same time, I reviewed the tooling ecosystem, removing unnecessary complexity and delivering more than £500,000 in annual savings.</p>\n<p>These achievements ultimately led to my selection for the Global Enterprise Engineers programme, recognising my contribution to platform engineering, strategic transformation, and technical leadership.</p>\n"
+  },
+  {
+    "id": "project-agent-pipeline",
+    "npc": "The Orchestrator",
+    "title": "Autonomous Dev Agent Pipeline",
+    "x": 560,
+    "y": 220,
+    "order": 2,
+    "sprite": null,
+    "html": "<p>A self-directed software development pipeline, built from Jira ticket to merge request.</p>\n<ul>\n<li>Orchestrated with LangGraph, tool calls bound via LangChain</li>\n<li>LLM inference through Amazon Bedrock, with Azure AI Foundry as a POC alternative</li>\n<li>Human-in-the-loop gates via Microsoft Teams Adaptive Cards and Logic Apps</li>\n<li>Temporal for durable workflow state, PostgreSQL for story state, Qdrant for RAG</li>\n<li>Covers spec generation, planning, coding, review, test execution, docs, and deployment</li>\n</ul>\n"
+  },
+  {
+    "id": "project-launch-monitor",
+    "npc": "The Range Hermit",
+    "title": "DIY Camera/Radar Launch Monitor",
+    "x": 300,
+    "y": 420,
+    "order": 3,
+    "sprite": 324,
+    "html": "<p>A homebrew launch monitor, built to track a 20-handicap golf game one range session at a time.</p>\n<ul>\n<li>Camera-based capture using the Arducam B0332 OV9281</li>\n<li>Python, OpenCV, and Pygame for the capture and analysis stack</li>\n<li>Feeds a longitudinal dataset used to spot swing patterns over time</li>\n</ul>\n<p>Fair warning: this NPC will talk your ear off about face-angle oscillation.</p>\n"
+  },
+  {
+    "id": "skills",
+    "npc": "The Toolsmith",
+    "title": "Skills & Tools",
+    "x": 120,
+    "y": 280,
+    "order": 4,
+    "sprite": 325,
+    "html": "<ul>\n<li><strong>Platform &amp; Cloud</strong>: AWS, Terraform, ECS, observability (OpenTelemetry, Datadog, Grafana)</li>\n<li><strong>CI/CD</strong>: GitLab CI, GitHub Actions, release engineering</li>\n<li><strong>AI/Agentic</strong>: LangGraph, LangChain, RAG pipelines (LanceDB, Qdrant), provider-agnostic LLM tooling</li>\n<li><strong>Salesforce</strong>: large-org administration, Apex, security hardening, CPQ configuration</li>\n<li><strong>Languages</strong>: Go, Python, JavaScript/TypeScript, Apex</li>\n</ul>\n"
+  }
+]
