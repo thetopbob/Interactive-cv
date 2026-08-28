@@ -5,7 +5,7 @@ company: "Harrods"
 period: "February 2019 - February 2020"
 sprite: 433
 x: 340
-y: 260
+y: 460
 quest_id: "harrods_digital_transformation"
 ---
 
