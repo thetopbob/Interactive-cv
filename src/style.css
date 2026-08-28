@@ -154,6 +154,117 @@ body {
     outline: none;
 }
 
+/* --- Achievement counter bar --- */
+
+#achievement-bar {
+    width: 750px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    color: var(--gold-dim);
+}
+
+#achievement-label {
+    white-space: nowrap;
+}
+
+#achievement-count {
+    color: var(--gold);
+    min-width: 48px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+#achievement-track {
+    flex: 1;
+    height: 8px;
+    background: var(--panel);
+    border: 2px solid var(--gold-dim);
+}
+
+#achievement-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--gold);
+    transition: width 0.4s ease;
+}
+
+/* --- Congratulations overlay --- */
+
+#congrats-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 8, 16, 0.7);
+    z-index: 50;
+}
+
+#congrats-overlay.hidden {
+    display: none;
+}
+
+#congrats-box {
+    position: relative;
+    background: var(--panel);
+    border: 3px solid var(--gold);
+    box-shadow:
+        0 0 0 3px var(--night),
+        inset 0 0 0 2px rgba(201, 163, 92, 0.3),
+        0 10px 40px rgba(0, 0, 0, 0.6);
+    padding: 32px 36px 28px;
+    text-align: center;
+    max-width: min(480px, 90vw);
+    animation: congrats-pop 0.4s ease;
+}
+
+@keyframes congrats-pop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#congrats-stars {
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 8px;
+    margin-bottom: 12px;
+}
+
+#congrats-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--teal-accent);
+    margin: 0 0 14px;
+}
+
+#congrats-text {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--parchment);
+    margin: 0 0 20px;
+}
+
+#congrats-close {
+    font-family: var(--font-display);
+    font-size: 10px;
+    background: var(--night);
+    color: var(--gold);
+    border: 3px solid var(--gold);
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#congrats-close:hover,
+#congrats-close:focus-visible {
+    background: var(--gold);
+    color: var(--night);
+    outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
