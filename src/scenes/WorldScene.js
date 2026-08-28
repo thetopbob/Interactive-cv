@@ -101,6 +101,49 @@ export default class WorldScene extends Phaser.Scene {
     this.wasd = this.input.keyboard.addKeys("W,A,S,D,E");
 
     this.activeNpc = null;
+
+    // --- Achievement tracking: unique NPCs the player has spoken with ---
+    this.metNpcs = new Set();
+    this.achievementCount = document.getElementById("achievement-count");
+    this.achievementFill = document.getElementById("achievement-fill");
+    this.congratsOverlay = document.getElementById("congrats-overlay");
+    this.congratsShown = false;
+
+    document
+      .getElementById("congrats-close")
+      .addEventListener("click", () => this.hideCongrats());
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.key === "Escape" &&
+        !this.congratsOverlay.classList.contains("hidden")
+      ) {
+        this.hideCongrats();
+      }
+    });
+
+    this.updateAchievementBar();
+  }
+
+  hideCongrats() {
+    this.congratsOverlay.classList.add("hidden");
+  }
+
+  updateAchievementBar() {
+    const total = this.npcs.length;
+    const met = this.metNpcs.size;
+    this.achievementCount.textContent = `${met} / ${total}`;
+    this.achievementFill.style.width = `${total ? (met / total) * 100 : 0}%`;
+  }
+
+  markNpcMet(npc) {
+    if (this.metNpcs.has(npc.id)) return;
+    this.metNpcs.add(npc.id);
+    this.updateAchievementBar();
+
+    if (!this.congratsShown && this.metNpcs.size === this.npcs.length) {
+      this.congratsShown = true;
+      this.congratsOverlay.classList.remove("hidden");
+    }
   }
 
   drawGroundPlaceholder() {
@@ -226,6 +269,7 @@ export default class WorldScene extends Phaser.Scene {
     }
 
     if (Phaser.Input.Keyboard.JustDown(this.wasd.E) && this.activeNpc) {
+      this.markNpcMet(this.activeNpc);
       this.dialog.open(
         this.activeNpc.npc,
         this.activeNpc.title,
