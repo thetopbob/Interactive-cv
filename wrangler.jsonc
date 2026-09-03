@@ -1,10 +1,10 @@
 {
-	"name": "inteactive-cv",
+	"name": "interactive-cv",
 	"compatibility_date": "2026-09-03",
 	"assets": {
-		"directory": "./"
+		"directory": ".",
 		"not_found_handling": "single-page-application"
-	}  
+	},
     "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
