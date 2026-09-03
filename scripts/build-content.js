@@ -33,15 +33,36 @@ function buildContent() {
       );
     }
 
+    const html = md.render(body);
+
+    // "Quest date": the employment period from frontmatter, shown as a
+    // small line under the company name (the first <h1> in the body).
+    let bodyHtml = html;
+    if (data.period) {
+      const questDate = `<p class="quest-date">${data.period}</p>`;
+      const headingEnd = bodyHtml.indexOf("</h1>");
+      if (headingEnd !== -1) {
+        const insertAt = headingEnd + "</h1>".length;
+        bodyHtml =
+          bodyHtml.slice(0, insertAt) +
+          questDate +
+          bodyHtml.slice(insertAt);
+      } else {
+        bodyHtml = questDate + bodyHtml;
+      }
+    }
+
     return {
       id,
       npc: data.npc || data.title || id,
       title: data.title || '',
+      company: data.company ?? null,
+      period: data.period ?? null,
       x: data.x ?? 400,
       y: data.y ?? 300,
       order: data.order ?? 0,
       sprite: data.sprite ?? null,
-      html: md.render(body)
+      html: bodyHtml
     };
   });
 

@@ -5,19 +5,19 @@ company: "Domestic & General"
 period: "February 2020 - September 2021"
 sprite: 433
 x: 520
-y: 240
+y: 110
 quest_id: "new_world_expansion"
 ---
 
 # Domestic & General
 
-I joined Domestic & General at a pivotal moment in the company's history. The organisation was preparing to enter a major new market in the United States, and technology would play a crucial role in making that expansion successful.
+I re-joined Domestic & General at a pivotal moment in the company's history. The organisation was preparing to enter a major new market in the United States, and technology would play a crucial role in making that expansion successful.
 
 My mission was twofold. First, I was asked to lead the Service Management workstream supporting the expansion programme. Second, I took on responsibilities as a Solution Architect, helping shape the technology foundations that would support the business as it entered a new territory.
 
 One of the first challenges was defining how services would be delivered in this new operating environment. Working closely with technology leaders and delivery partners, I helped create a target operating model and capability model for Service Management. These blueprints provided clarity around responsibilities, delivery approaches, and the partnerships required to support long-term success.
 
-As plans evolved, I designed a Service Management Blueprint that embraced modern DevSecOps principles. Rather than relying on traditional governance-heavy processes, the focus was on enabling teams to deliver securely, efficiently, and at scale. The result was an approach that balanced control with agility and supported the fast-paced demands of a growing business.
+As plans evolved, I designed a Service Management Blueprint that embraced modern DevSecOps principles. Rather than relying on traditional governance-heavy processes, the focus was on enabling teams to deliver securely, efficiently, and at scale. The result was an approach that balanced control with agility and supported the fast-paced demands of a growing business, maintaing local control along with light-touch global oversight.
 
 To bring this vision to life, I led the selection and implementation of key tools that would form the backbone of the engineering ecosystem. This included technologies such as Jira, GitHub, Copado, Confluence, and ServiceNow, supporting both AWS and Salesforce platforms. Together, these tools formed an integrated DevSecOps toolchain capable of supporting development, operations, governance, and collaboration.
 

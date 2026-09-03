@@ -87,8 +87,9 @@ export default class WorldScene extends Phaser.Scene {
 
     this.interactLabel = this.add
       .text(0, 0, "Press E", {
-        fontFamily: "monospace",
-        fontSize: "13px",
+        fontFamily: "Saira, monospace",
+        fontStyle: "bold",
+        fontSize: "14px",
         color: "#14121f",
         backgroundColor: "#c9a35c",
         padding: { x: 6, y: 3 },
@@ -102,6 +103,15 @@ export default class WorldScene extends Phaser.Scene {
 
     this.activeNpc = null;
 
+    // --- Welcome dialog: shown on scene start until dismissed ---
+    this.welcomeOverlay = document.getElementById("welcome-overlay");
+    this.welcomeOpen = true;
+    this.welcomeOverlay.classList.remove("hidden");
+
+    document
+      .getElementById("welcome-close")
+      .addEventListener("click", () => this.hideWelcome());
+
     // --- Achievement tracking: unique NPCs the player has spoken with ---
     this.metNpcs = new Set();
     this.achievementCount = document.getElementById("achievement-count");
@@ -113,15 +123,21 @@ export default class WorldScene extends Phaser.Scene {
       .getElementById("congrats-close")
       .addEventListener("click", () => this.hideCongrats());
     document.addEventListener("keydown", (e) => {
-      if (
-        e.key === "Escape" &&
-        !this.congratsOverlay.classList.contains("hidden")
-      ) {
+      if (e.key !== "Escape") return;
+      if (!this.congratsOverlay.classList.contains("hidden")) {
         this.hideCongrats();
+      }
+      if (this.welcomeOpen) {
+        this.hideWelcome();
       }
     });
 
     this.updateAchievementBar();
+  }
+
+  hideWelcome() {
+    this.welcomeOpen = false;
+    this.welcomeOverlay.classList.add("hidden");
   }
 
   hideCongrats() {
@@ -189,8 +205,9 @@ export default class WorldScene extends Phaser.Scene {
 
     this.add
       .text(entry.x, entry.y - 26, entry.npc, {
-        fontFamily: "monospace",
-        fontSize: "12px",
+        fontFamily: "Saira, monospace",
+        fontStyle: "bold",
+        fontSize: "14px",
         color: "#f3e6d0",
       })
       .setOrigin(0.5);
@@ -212,7 +229,7 @@ export default class WorldScene extends Phaser.Scene {
   }
 
   update() {
-    if (this.dialog.isOpen()) {
+    if (this.dialog.isOpen() || this.welcomeOpen) {
       this.player.body.setVelocity(0);
       return;
     }

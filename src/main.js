@@ -15,4 +15,9 @@ const config = {
   scene: [WorldScene],
 };
 
-new Phaser.Game(config);
+// Wait for web fonts (Saira) before starting the game, so Phaser canvas
+// text doesn't render in a fallback font. document.fonts.ready resolves
+// even if font loading fails, so this can't stall the game.
+document.fonts.ready.then(() => {
+  new Phaser.Game(config);
+});

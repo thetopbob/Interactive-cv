@@ -1,10 +1,10 @@
 ---
 npc_name: "The DevOps Strategist"
-title: "Program Architect - Salesforce DevOps"
+title: "Program Architect"
 company: "Copado"
 period: "September 2021 - June 2023"
-x: 690
-y: 350
+x: 300
+y: 420
 quest_id: "salesforce_devops_transformation"
 sprite: 325
 ---
@@ -19,7 +19,7 @@ One engagement involved a major financial institution where I identified technol
 
 I regularly acted as a trusted advisor to engineering teams, development partners, and senior stakeholders. Through coaching, planning, and technical leadership, I helped organisations establish stronger delivery practices and gain greater value from their investment in Salesforce.
 
-Beyond customer engagements, I developed reusable solutions and delivery assets that could be adopted across multiple projects, improving consistency for both customers and consulting teams.
+Beyond customer engagements, I developed reusable solutions for use in release pipelines that could be adopted across multiple projects, improving consistency for both customers and consulting teams.
 
 My work and passion for cultural transformation in technology eventually led to an invitation to deliver a keynote presentation on the importance of people and culture within successful DevOps programmes.
 

@@ -5,8 +5,10 @@
     --gold: #c9a35c;
     --gold-dim: #8a713c;
     --teal-accent: #57d1c9;
-    --font-display: "Press Start 2P", monospace;
-    --font-body: "VT323", monospace;
+    --font-display: "Saira", monospace;
+    --font-display-weight: 700;
+    --font-body: "Saira", monospace;
+    --font-body-weight: 500;
 }
 
 * {
@@ -20,6 +22,7 @@ body {
     background: var(--night);
     color: var(--parchment);
     font-family: var(--font-body);
+    font-weight: var(--font-body-weight);
     height: 100%;
     overflow: hidden;
 }
@@ -37,21 +40,29 @@ body {
     width: 750;
     max-width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
     font-family: var(--font-display);
 }
 
 .hud-title {
-    font-size: 14px;
+    font-size: 24px;
+    font-weight: var(--font-display-weight);
     color: var(--teal-accent);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .hud-hint {
     font-size: 18px;
     font-family: var(--font-body);
     color: var(--gold-dim);
+}
+
+#dialog-body,
+#welcome-text,
+#congrats-text {
+    font-weight: var(--font-body-weight);
 }
 
 #game-container {
@@ -99,7 +110,8 @@ body {
     background: var(--gold);
     color: var(--night);
     font-family: var(--font-display);
-    font-size: 11px;
+    font-weight: var(--font-display-weight);
+    font-size: 14px;
     padding: 6px 12px;
     border: 3px solid var(--night);
     box-shadow: 0 0 0 2px var(--gold);
@@ -107,7 +119,8 @@ body {
 
 #dialog-title {
     font-family: var(--font-display);
-    font-size: 15px;
+    font-weight: var(--font-display-weight);
+    font-size: 20px;
     color: var(--teal-accent);
     margin: 4px 0 14px;
     line-height: 1.6;
@@ -125,6 +138,26 @@ body {
     margin: 0 0 12px;
 }
 
+/* Company name heading that starts each NPC's content. Without this the
+   browser-default h1 size (~2em) and margins look oversized in the box. */
+#dialog-body h1 {
+    font-size: 20px;
+    font-weight: var(--font-display-weight);
+    color: var(--gold);
+    margin: 0 0 10px;
+    padding: 0;
+    line-height: 1.3;
+}
+
+/* Quest date: employment period shown under the company name. */
+#dialog-body .quest-date {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin: -6px 0 14px;
+}
+
 #dialog-body ul {
     margin: 0 0 12px;
     padding-left: 22px;
@@ -139,31 +172,8 @@ body {
     top: -22px;
     right: 8px;
     font-family: var(--font-display);
-    font-size: 10px;
-    background: var(--night);
-    color: var(--gold);
-    border: 3px solid var(--gold);
-    padding: 6px 8px;
-    cursor: pointer;
-}
-
-#dialog-close:hover,
-#dialog-close:focus-visible {
-    background: var(--gold);
-    color: var(--night);
-    outline: none;
-}
-
-/* --- Achievement counter bar --- */
-
-#achievement-bar {
-    width: 750px;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-display);
-    font-size: 11px;
+    font-weight: var(--font-display-weight);
+    font-size: 18px;
     color: var(--gold-dim);
 }
 
@@ -190,6 +200,76 @@ body {
     width: 0%;
     background: var(--gold);
     transition: width 0.4s ease;
+}
+
+/* --- Welcome overlay --- */
+
+#welcome-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 8, 16, 0.7);
+    z-index: 50;
+}
+
+#welcome-overlay.hidden {
+    display: none;
+}
+
+#welcome-box {
+    position: relative;
+    background: var(--panel);
+    border: 3px solid var(--gold);
+    box-shadow:
+        0 0 0 3px var(--night),
+        inset 0 0 0 2px rgba(201, 163, 92, 0.3),
+        0 10px 40px rgba(0, 0, 0, 0.6);
+    padding: 32px 36px 28px;
+    text-align: center;
+    max-width: min(480px, 90vw);
+    animation: congrats-pop 0.4s ease;
+}
+
+#welcome-stars {
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 8px;
+    margin-bottom: 12px;
+}
+
+#welcome-title {
+    font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
+    font-size: 22px;
+    color: var(--teal-accent);
+    margin: 0 0 14px;
+}
+
+#welcome-text {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--parchment);
+    margin: 0 0 20px;
+}
+
+#welcome-close {
+    font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
+    font-size: 13px;
+    background: var(--night);
+    color: var(--gold);
+    border: 3px solid var(--gold);
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#welcome-close:hover,
+#welcome-close:focus-visible {
+    background: var(--gold);
+    color: var(--night);
+    outline: none;
 }
 
 /* --- Congratulations overlay --- */
@@ -236,7 +316,8 @@ body {
 
 #congrats-title {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-weight: var(--font-display-weight);
+    font-size: 22px;
     color: var(--teal-accent);
     margin: 0 0 14px;
 }
@@ -250,7 +331,8 @@ body {
 
 #congrats-close {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-weight: var(--font-display-weight);
+    font-size: 13px;
     background: var(--night);
     color: var(--gold);
     border: 3px solid var(--gold);
@@ -263,6 +345,36 @@ body {
     background: var(--gold);
     color: var(--night);
     outline: none;
+}
+
+/* --- Contact bar --- */
+
+#contact-bar {
+    width: 750px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
+    font-size: 13px;
+    color: var(--gold-dim);
+    padding: 4px 0;
+}
+
+#contact-label {
+    white-space: nowrap;
+}
+
+#contact-link {
+    color: var(--teal-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#contact-link:hover,
+#contact-link:focus-visible {
+    color: var(--gold);
 }
 
 @media (prefers-reduced-motion: reduce) {
